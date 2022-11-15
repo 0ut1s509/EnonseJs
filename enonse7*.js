@@ -1,12 +1,15 @@
-let mo="mo avek vwayel";
+let mo="VWAYEl";
 let vwayel = "aeiouy";
 let ranplas;
+let nmo=[];
 for (el of mo){
-    if (vwayel.includes(el)){
-        console.log(el)
-         ranplas = mo.replaceAll(el,"*");
-    }
+   nmo.push(el)
 }
 
-
-console.log(ranplas)
+for(el in nmo){
+ if (vwayel.includes(nmo[el].toLowerCase())){
+    console.log(nmo[el])
+    nmo[parseInt(el)+1] = "*";
+ }
+}
+console.log(nmo.join(""));
