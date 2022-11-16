@@ -8,8 +8,8 @@ for (el of mo){
 
 for(el in nmo){
  if (vwayel.includes(nmo[el].toLowerCase())){
-    console.log(nmo[el])
-    nmo[parseInt(el)+1] = "*";
+   console.log(nmo[el]);
+   nmo[parseInt(el)+1] = "*";
  }
 }
 console.log(nmo.join(""));
