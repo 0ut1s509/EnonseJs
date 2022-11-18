@@ -1,29 +1,24 @@
 let alph ="abcdefghijklmnopqrstuvwxyz";
-function splitt(tosplit){
-    tosplit=tosplit.split("")
-    return tosplit;
 
-}
 function toDecript(tocript){
     tocript = tocript.toLowerCase()
     tocript =tocript.split(" ");
     let concat="";
     let temp="";
     for (let el of tocript){
-        el =splitt(el);
         if (el[0] == ">"){
             temp = alph.indexOf((el.at(-1)));
-            temp  = alph[temp + parseInt(el.slice(1,-1).join(""))];
+            temp  = alph[temp + parseInt(el.slice(1,-1))];
             concat+=temp;
         }
          if (el[0] == "<"){
              temp = alph.indexOf((el.at(-1)));
-             temp  = alph[temp - parseInt(el.slice(1,-1).join(""))];
+             temp  = alph[temp - parseInt(el.slice(1,-1))];
              concat+=temp;
          }
     }
     return concat.toUpperCase();
 }
 
-let Decript = toDecript(">3A >0A <1U <10K >1A <9J <0S <16U");
+let Decript = toDecript("<1T >7H >3C <5Y >13J <2C <5W >4A");
 console.log(Decript)
